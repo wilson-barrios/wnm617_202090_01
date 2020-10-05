@@ -30,6 +30,7 @@ body {
    font-family:var(--font-sans);
 }
 
+
 h1,
 h2,
 h3,
@@ -62,9 +63,15 @@ a {
    max-width:1000px;
    margin-left: auto;
    margin-right: auto;
+   
 }
 .hidden { display:none; }
+.overscroll {
+   height:100%;
+   width:100%;
+   overflow:auto;
 
+}
 
 
 
@@ -204,8 +211,9 @@ a {
 
 /* PAGE SPECIFICS */
 #signin-page [data-role='main'] {
-   display:flex;
-   flex-direction:column;
+  background-image:url('../img/mainback.jpg');
+  display:flex;
+  flex-direction:column;
 }
 #signup-page [data-role='main'] {
    display:flex;
@@ -216,4 +224,131 @@ a {
    background-image:url('../img/map_example.jpg');
    background-position:center;
    background-size:cover;
+}
+
+
+
+
+
+
+
+
+
+/* MODAL */
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index:10;
+    pointer-events:none;
+}
+.modal.active {
+    opacity: 1;
+}
+.modal-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.6);
+}
+.modal.active .modal-back {
+   pointer-events:initial;
+}
+
+
+
+/* MODAL POPUP */
+.modal-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,calc(-50% + 3em));
+    width: 80vmin;
+    transition:all 0.3s;
+}
+.modal.active .modal-popup {
+    transform: translate(-50%,-50%);
+   pointer-events:initial;
+}
+.modal-head,
+.modal-foot {
+    background-color: var(--color-neutral-lighter);
+    padding: 0.5em 1em;
+}
+.modal-body {
+    background-color: var(--color-white);
+    padding: 1em;
+}
+.modal-head h1 {
+  font-size:1em;
+  margin:0;
+}
+
+
+
+
+
+/* MODAL DRAWER */
+.modal-drawer {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   transition: all 0.3s;
+   box-shadow:0 0 5px rgba(0,0,0,0.15);
+}
+.modal-drawer.left,
+.modal-drawer.right {
+   height: 100%;
+   width:70vw;
+}
+.modal-drawer.left { left: 0; transform:translateX(-100%); }
+.modal-drawer.right { right: 0; transform:translateX(100%); }
+
+.modal-drawer.top,
+.modal-drawer.bottom {
+   width: 100%;
+   height:30vh;
+}
+.modal-drawer.top { top: 0; transform:translateY(-100%); }
+.modal-drawer.bottom { bottom: 0; transform:translateY(100%); }
+
+.modal.active .modal-drawer {
+   transform:translate(0);
+   pointer-events:initial;
+}
+
+
+.modal-drawer .modal-body {
+   flex:1 1 100%;
+}
+
+
+
+
+/* FLOATER */
+.floater { position: absolute; }
+.floater.right { right: 1em; }
+.floater.left { left: 1em; }
+.floater.top { top: 1em; }
+.floater.bottom { bottom: 1em; }
+
+
+
+
+/* CIRCLE */
+.btn-circle {
+   background-color:var(--color-white);
+   width:3rem;
+   height:3rem;
+   line-height:3rem;
+   text-align:center;
+   font-size:1.5em;
+   border-radius:2em;
+   box-shadow:2px 2px 5px rgba(0,0,0,0.15);
 }

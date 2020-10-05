@@ -9,7 +9,7 @@
    --font-serif:Georgia, serif;
 
    --color-neutral-lighter:#f0f0f1;
-   --color-neutral-light:#e0e0e5;
+   --color-neutral-light:#e27906;
    --color-neutral-mediumer:#b4b4be;
    --color-neutral-medium:#83838f;
    --color-neutral-dark:#30304e;
@@ -206,7 +206,9 @@ a {
 #signin-page [data-role='main'] {
    display:flex;
    flex-direction:column;
+   background-image:url('../img/mainback.jpg');
 }
+
 #signup-page [data-role='main'] {
    display:flex;
    align-items:center;
