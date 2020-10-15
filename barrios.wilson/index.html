@@ -8,6 +8,7 @@
 
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
    <script src="js/app.js"></script>
@@ -19,33 +20,49 @@
 <body>
 
 
+<!--SIGN IN PAGE-->
+
+
    <section data-role="page" id="signin-page">
       <div data-role="main">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
-            <img src="img/ftt-logo.png" style="width:85vw;height:85vw;" class="icon" alt="">
+            <img src="img/ftt-logo.png" style="width:90vw;height:90vw;" class="icon" alt="">
          </div>
          <form id="signin-form" data-ajax="false" style="padding:1em">
             <div class="form-control">
                <label for="signin-username" class="form-label">Username</label>
-               <input id="signin-username" type="text" class="form-input" data-role="none" placeholder="Type your user name">
+               <input id="signin-username" type="text" class="form-input" data-role="none" placeholder="USER NAME">
             </div>
             <div class="form-control">
                <label for="signin-password" class="form-label">Password</label>
-               <input id="signin-password" type="password" class="form-input" data-role="none" placeholder="Type your password">
+               <input id="signin-password" type="password" class="form-input" data-role="none" placeholder="PASSWORD">
             </div>
             <div class="form-control">
                <input type="submit" data-role="none" class="form-button" value="Sign In">
             </div>
-            <div class="form-control" style="text-align:center;font-size:0.8em">
+            <div class="form-control" style="text-align:center;font-size:0.8em; color: #e27906;">
                Don't have an account? <a href="#signup-page">Sign Up</a>!
             </div>
          </form>
       </div>
+
+      <div class="modal" id="signin-warning">
+         <div class="modal-toast top" data-deactivate="#signin-warning">
+            <img src="img/warning.png" style="width:40vw;height:40vw;" class="icon" alt="">
+            <div class="message">Failure</div>
+         </div>
+      </div>
    </section>
+
 
    <section data-role="page" id="signup-page">
       <div data-role="main">
-         <form id="signup-form" data-ajax="false" style="padding:1em">
+
+         <div class="flex-align-center flex-justify-center">
+            <img src="img/ftt-logo.png" style="width:50vw;height:50vw;" class="icon" alt="">
+         </div>
+
+         <form id="signup-form" data-ajax="false" style="padding:0.1em">
             <div class="form-control">
                <label for="signup-username" class="form-label">Username</label>
                <input id="signup-username" type="text" class="form-input" data-role="none" placeholder="Type your user name">
@@ -57,101 +74,203 @@
             <div class="form-control">
                <a href="#list-page" class="form-button">Sign Up</a>
             </div>
-            <div class="form-control" style="text-align:center;font-size:0.8em">
+            <div class="form-control" style="text-align:center;font-size:0.8em; color: #e27906;">
                Already have an account? <a href="#signin-page">Sign In</a>!
             </div>
          </form>
       </div>
    </section>
 
+
+<!--MAP PAGE-->
+
+
    <section data-role="page" id="recent-page">
+
+<header data-role="header">
+<div class="flex-stretch display-flex flex-align-center flex-justify-center">
+            <div class= "header-logo"><img src="img/ftt-logo-h.png"></div>
+         </div>
+         </header>
+
+   <!--DRAWER-->
+
       <div data-role="main">
-         <div class="floater right bottom">
+         <div class="floater right top">
             <div class="btn-circle" data-toggle="#recent-drawer">&plus;</div>
          </div>
 
 
          <div class="modal" id="recent-drawer">
             <!-- <div class="modal-back" data-deactivate="#recent-drawer"></div> -->
-            <div class="modal-drawer left">
-               <div class="modal-head">Title</div>
+            <div class="modal-drawer bottom">
+               <div class="modal-head">FOOD TRUCK LOCATION</div>
                <div class="modal-body">
-                  Links and such
+                  <div class="input-container">
+
+                    <div class="form-control">
+                      <label for="foodtruck-location" class="form-label">
+                        Select Food Truck Type
+                      </label>
+                      <div class="relative">
+                        <div class="select-div">
+                          <select name="food type" id="food-type" class="form-select" data-role="none">
+                            <option value="" disabled selected>Food Type</option>
+                            <option value="ft1">Mexican Food</option>
+                            <option value="ft2">Italian Food</option>
+                            <option value="ft3">Hot Dogs</option>
+                            <option value="ft4">Waffles</option>
+                            <option value="ft5">BBQ</option>
+                            <option value="ft6">Sushi</option>
+                            <option value="ft7">Ice Cream</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-control">
+                    <a href="#map-page" data-deactivate="#recent-drawer" class="form-button">MARK FOOD TRUCK</a>
+                  </div>
+                   </form>
                </div>
             </div>
          </div>
       </div>
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+
+
+      <footer data-role="footer" style="position: absolute; bottom: 0; width: 100%">
+         <ul style="height: 100%;">
+
+            <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#recent-page">
+                  <div class= "icon"><img src="img/recent.png" class="icon"></div>
+                  <div class="icon-label-active">RECENT</div></a></li>
+
+
+            <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#list-page">
+                  <div class= "icon"><img src="img/list.png" class="icon"></div>
+                  <div class="icon-label-active">LIST</div></a></li>
+
+
+             <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#user-profile-page">
+                  <div class= "icon"><img src="img/profile.png" class="icon"></div>
+                  <div class="icon-label-active">PROFILE</div></a></li>     
          </ul>
       </footer>
 
-
    </section>
+
+   <!--LIST PAGE-->
 
    <section data-role="page" id="list-page">
       <header data-role="header">
-         <h1>Animals</h1>
+         <h1>FOOD TRUCKS LIST</h1>
          <ul>
+            <li>
+            <div class="header-icon"><img src="img/ftt-icon.png"></div>
+
+          </li>
             <li class="flex-stretch"></li>
-            <li><a href="#" data-activate="#list-add-animal">+</a></li>
+
+
+               <!--ADD TRUCK-->
+
+
+            <li><a href="#" data-activate="#list-add-animal"><div class= "icon"><img src="img/add.png" class="icon"></div><div class="icon-label-active">ADD TRUCK</div></a></li>
          </ul>
       </header>
       <div data-role="main">
          <div class="overscroll">
-            <ul>
-               <!-- li*10>a[href=#animal-profile-page]>{Animal $} -->
-               <li><a href="#animal-profile-page">Animal 1</a></li>
-               <li><a href="#animal-profile-page">Animal 2</a></li>
-               <li><a href="#animal-profile-page">Animal 3</a></li>
-               <li><a href="#animal-profile-page">Animal 4</a></li>
-               <li><a href="#animal-profile-page">Animal 5</a></li>
-               <li><a href="#animal-profile-page">Animal 6</a></li>
-               <li><a href="#animal-profile-page">Animal 7</a></li>
-               <li><a href="#animal-profile-page">Animal 8</a></li>
-               <li><a href="#animal-profile-page">Animal 9</a></li>
-               <li><a href="#animal-profile-page">Animal 10</a></li>
-               <li><a href="#animal-profile-page">Animal 1</a></li>
-               <li><a href="#animal-profile-page">Animal 2</a></li>
-               <li><a href="#animal-profile-page">Animal 3</a></li>
-               <li><a href="#animal-profile-page">Animal 4</a></li>
-               <li><a href="#animal-profile-page">Animal 5</a></li>
-               <li><a href="#animal-profile-page">Animal 6</a></li>
-               <li><a href="#animal-profile-page">Animal 7</a></li>
-               <li><a href="#animal-profile-page">Animal 8</a></li>
-               <li><a href="#animal-profile-page">Animal 9</a></li>
-               <li><a href="#animal-profile-page">Animal 10</a></li>
-               <li><a href="#animal-profile-page">Animal 1</a></li>
-               <li><a href="#animal-profile-page">Animal 2</a></li>
-               <li><a href="#animal-profile-page">Animal 3</a></li>
-               <li><a href="#animal-profile-page">Animal 4</a></li>
-               <li><a href="#animal-profile-page">Animal 5</a></li>
-               <li><a href="#animal-profile-page">Animal 6</a></li>
-               <li><a href="#animal-profile-page">Animal 7</a></li>
-               <li><a href="#animal-profile-page">Animal 8</a></li>
-               <li><a href="#animal-profile-page">Animal 9</a></li>
-               <li><a href="#animal-profile-page">Animal 10</a></li>
-               <li><a href="#animal-profile-page">Animal 1</a></li>
-               <li><a href="#animal-profile-page">Animal 2</a></li>
-               <li><a href="#animal-profile-page">Animal 3</a></li>
-               <li><a href="#animal-profile-page">Animal 4</a></li>
-               <li><a href="#animal-profile-page">Animal 5</a></li>
-               <li><a href="#animal-profile-page">Animal 6</a></li>
-               <li><a href="#animal-profile-page">Animal 7</a></li>
-               <li><a href="#animal-profile-page">Animal 8</a></li>
-               <li><a href="#animal-profile-page">Animal 9</a></li>
-               <li><a href="#animal-profile-page">Animal 10</a></li>
-            </ul>
+            <div class="trucklist">
+
+
+               <div class="trucklist-item">
+                  <div class="trucklist-icon">
+                     <img src="img/mitchells.jpg" alt="">
+                  </div>
+                  <div class="trucklist-description">
+                     <div class="trucklist-name">Mitchells</div>
+                     <div class="trucklist-type"><strong>Food Type</strong> Mexican</div>
+                     <div class="trucklist-breed"><strong>Favorite Dish</strong> Burritos</div>
+                  </div>
+               </div>
+
+
+               <div class="trucklist-item">
+                  <div class="trucklist-icon">
+                     <img src="img/dogtown.jpg" alt="">
+                  </div>
+                  <div class="trucklist-description">
+                     <div class="trucklist-name"> Dog Town</div>
+                     <div class="trucklist-type"><strong>Food Type</strong> Hot Dogs</div>
+                     <div class="trucklist-breed"><strong>Favorite Dish</strong> Town Dog</div>
+                  </div>
+               </div>
+
+
+               <div class="trucklist-item">
+                  <div class="trucklist-icon">
+                     <img src="img/freal.jpg" alt="">
+                  </div>
+                  <div class="trucklist-description">
+                     <div class="trucklist-name"> Freal</div>
+                     <div class="trucklist-type"><strong>Food Type</strong> Shakes</div>
+                     <div class="trucklist-breed"><strong>Favorite Dish</strong> Vanilla Ice</div>
+                  </div>
+               </div>
+
+
+               <div class="trucklist-item">
+                  <div class="trucklist-icon">
+                     <img src="img/martyswaffle.jpg" alt="">
+                  </div>
+                  <div class="trucklist-description">
+                     <div class="trucklist-name"> Marty's Waffle</div>
+                     <div class="trucklist-type"><strong>Food Type</strong> Waffles</div>
+                     <div class="trucklist-breed"><strong>Favorite Dish</strong> Special</div>
+                  </div>
+               </div>
+
+               <div class="trucklist-item">
+                  <div class="trucklist-icon">
+                     <img src="img/bestruckin.jpg" alt="">
+                  </div>
+                  <div class="trucklist-description">
+                     <div class="trucklist-name"> Best Truck'n</div>
+                     <div class="trucklist-type"><strong>Food Type</strong> BBQ</div>
+                     <div class="trucklist-breed"><strong>Favorite Dish</strong> Short Ribs</div>
+                  </div>
+               </div>
+
+
+
+               
+            </div>
          </div>
       </div>
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+
+
+      <footer data-role="footer" style="position: absolute; bottom: 0; width: 100%">
+         <ul style="height: 100%;">
+
+            <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#recent-page">
+                  <div class= "icon"><img src="img/recent.png" class="icon"></div>
+                  <div class="icon-label-active">RECENT</div></a></li>
+
+
+            <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#list-page">
+                  <div class= "icon"><img src="img/list.png" class="icon"></div>
+                  <div class="icon-label-active">LIST</div></a></li>
+
+
+             <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#user-profile-page">
+                  <div class= "icon"><img src="img/profile.png" class="icon"></div>
+                  <div class="icon-label-active">PROFILE</div></a></li>     
          </ul>
       </footer>
 
@@ -159,18 +278,18 @@
       <div class="modal" id="list-add-animal">
          <div class="modal-back" data-deactivate="#list-add-animal"></div>
          <form class="modal-popup" id="list-add-animal-form" data-ajax="false">
-            <div class="modal-head"><h1>Add Animal</h1></div>
+            <div class="modal-head"><h1>Add Food Truck</h1></div>
             <div class="modal-body">
                <div class="form-control">
-                  <label for="list-add-name" class="form-label">Animal Name</label>
+                  <label for="list-add-name" class="form-label">Food Truck Name</label>
                   <input id="list-add-name" type="text" class="form-input" data-role="none">
                </div>
                <div class="form-control">
-                  <label for="list-add-type" class="form-label">Animal Type</label>
-                  <input id="list-add-type" type="text" class="form-input" data-role="none">
+                  <label for="list-add-food type" class="form-label">Food Type</label>
+                  <input id="list-add-food type" type="text" class="form-input" data-role="none">
                </div>
                <div class="form-control">
-                  <label for="list-add-breed" class="form-label">Animal Breed</label>
+                  <label for="list-add-dish" class="form-label">Favorite Dish</label>
                   <input id="list-add-breed" type="text" class="form-input" data-role="none">
                </div>
             </div>
@@ -181,23 +300,249 @@
       </div>
    </section>
 
+   <!--USER PROFILE PAGE-->
+
+
    <section data-role="page" id="user-profile-page">
       <div data-role="main">
-         User Profile<br>
-         <a href="#" class="js-logout">Logout</a>
-      </div>
-      <footer data-role="footer">
+
+
+<header data-role="header">
+         <h1>USER PROFILE</h1>
          <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+            <li>
+            <div class="header-icon"><img src="img/ftt-icon.png"></div>
+
+          </li>
+            <li class="flex-stretch"></li>
+
+
+               <!--SETTINGS-->
+
+
+            <li><a href="#user-settings-page"><div class= "icon"><img src="img/settings.png" class="icon"></div><div class="icon-label-active">SETTINGS</div></a></li>
+         </ul>
+      </header>
+
+
+         <div class="user-profile-image">
+            <img src="img/me.jpg" alt="">
+         </div>
+
+         <div class="cont soft">
+            <ul  class="profile-list">
+               <li class="row">
+                  <div class="flex-none"><img src="img/name.png" class="profile-icon"></div>
+                  <div class="flex-stretch"><h7>WILSON BARRIOS</h7></div>
+               </li>
+               <li class="row">
+                  <div class="flex-none"><img src="img/fav.png" class="profile-icon"></div>
+                  <div class="flex-stretch"><h7>Mexican Food</h7></div>
+               </li>
+               <li class="row">
+                  <div class="flex-none"><img src="img/location.png" class="profile-icon"></div>
+                  <div class="flex-stretch"><h7>Carmichael, CA</h7></div>
+               </li>
+            </ul>
+         </div>
+         
+         
+      </div>
+      <footer data-role="footer" style="position: absolute; bottom: 0; width: 100%">
+         <ul style="height: 100%;">
+
+            <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#recent-page">
+                  <div class= "icon"><img src="img/recent.png" class="icon"></div>
+                  <div class="icon-label-active">RECENT</div></a></li>
+
+
+            <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#list-page">
+                  <div class= "icon"><img src="img/list.png" class="icon"></div>
+                  <div class="icon-label-active">LIST</div></a></li>
+
+
+             <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#user-profile-page">
+                  <div class= "icon"><img src="img/profile.png" class="icon"></div>
+                  <div class="icon-label-active">PROFILE</div></a></li>     
          </ul>
       </footer>
    </section>
 
+      <!--USER PROFILE SETTINGS PAGE-->
+
+
+   <section data-role="page" id="user-settings-page">
+
+<header data-role="header">
+         <h1>USER PROFILE SETTINGS</h1>
+         <ul>
+            <li>
+            <div class="header-icon"><img src="img/ftt-icon.png"></div>
+
+          </li>
+            <li class="flex-stretch"></li>
+
+
+               <!--SETTINGS-->
+
+
+            <li><a href="#" data-rel="back"><div class= "icon"><img src="img/recent.png" class="icon"></div><div class="icon-label-active"> GO BACK</div></a></li>
+         </ul>
+      </header>
+
+
+
+      <div data-role="main">
+         <ul class="settings-list">
+            <li><a href="#user-profile-edit-page">Update Profile</a></li>
+            <li><a href="#user-password-edit-page">Change Password</a></li>
+            <li><a href="#" class="js-logout">Logout</a></li>
+         </ul>
+      </div>
+
+      <footer data-role="footer" style="position: absolute; bottom: 0; width: 100%">
+         <ul style="height: 100%;">
+
+            <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#recent-page">
+                  <div class= "icon"><img src="img/recent.png" class="icon"></div>
+                  <div class="icon-label-active">RECENT</div></a></li>
+
+
+            <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#list-page">
+                  <div class= "icon"><img src="img/list.png" class="icon"></div>
+                  <div class="icon-label-active">LIST</div></a></li>
+
+
+             <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#user-profile-page">
+                  <div class= "icon"><img src="img/profile.png" class="icon"></div>
+                  <div class="icon-label-active">PROFILE</div></a></li>     
+         </ul>
+      </footer>
+   </section>
+
+
+         <!--USER INFO PAGE-->
+
+
+   <section data-role="page" id="user-profile-edit-page">
+      <header data-role="header">
+         <h1>USER INFO</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><div class= "icon"><img src="img/recent.png" class="icon"></div>
+                  <div class="icon-label-active">GO BACK</div></a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" data-rel="back"><div class= "icon"><img src="img/save.png" class="icon"></div>
+                  <div class="icon-label-active">SAVE</div></a></li>
+         </ul>
+      </header >
+      <div data-role="main">
+         <form id="user-edit-form" data-ajax="false" style="padding:1em">
+            <div class="form-control">
+               <label for="user-edit-username" class="form-label">Username</label>
+               <input id="user-edit-username" type="text" class="form-input" data-role="none" placeholder="Type your user name" value="wbarrios">
+            </div>
+            <div class="form-control">
+               <label for="user-edit-name" class="form-label">Full Name</label>
+               <input id="user-edit-name" type="text" class="form-input" data-role="none" placeholder="Type your full name" value="Wilson Barrios">
+            </div>
+            <div class="form-control">
+               <label for="user-edit-email" class="form-label">Email</label>
+               <input id="user-edit-email" type="text" class="form-input" data-role="none" placeholder="Type your user email" value="graphics@wilsonbarrios.com">
+            </div>
+         </form>
+      </div>
+
+      <footer data-role="footer" style="position: absolute; bottom: 0; width: 100%">
+         <ul style="height: 100%;">
+
+            <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#recent-page">
+                  <div class= "icon"><img src="img/recent.png" class="icon"></div>
+                  <div class="icon-label-active">RECENT</div></a></li>
+
+
+            <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#list-page">
+                  <div class= "icon"><img src="img/list.png" class="icon"></div>
+                  <div class="icon-label-active">LIST</div></a></li>
+
+
+             <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#user-profile-page">
+                  <div class= "icon"><img src="img/profile.png" class="icon"></div>
+                  <div class="icon-label-active">PROFILE</div></a></li>     
+         </ul>
+      </footer>
+   </section>
+
+
+         <!--USER PASSWORD EDIT PAGE-->
+
+
+   <section data-role="page" id="user-password-edit-page">
+      <header data-role="header">
+         <h1>CHANGE PASSWORD</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><div class= "icon"><img src="img/recent.png" class="icon"></div>
+                  <div class="icon-label-active">GO BACK</div></a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" data-rel="back"><div class= "icon"><img src="img/save.png" class="icon"></div>
+                  <div class="icon-label-active">SAVE</div></a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form id="user-password-form" data-ajax="false" style="padding:1em">
+            <div class="form-control">
+               <label for="user-password-oldpassword" class="form-label">Old Password</label>
+               <input id="user-password-oldpassword" type="password" class="form-input" data-role="none" placeholder="Type your old password">
+            </div>
+            <div class="form-control">
+               <label for="user-password-password" class="form-label">New Password</label>
+               <input id="user-password-password" type="password" class="form-input" data-role="none" placeholder="Type your new password">
+            </div>
+            <div class="form-control">
+               <label for="user-password-confirm" class="form-label">Confirm Password</label>
+               <input id="user-password-confirm" type="password" class="form-input" data-role="none" placeholder="Type your new password">
+            </div>
+         </form>
+      </div>
+<footer data-role="footer" style="position: absolute; bottom: 0; width: 100%">
+         <ul style="height: 100%;">
+
+            <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#recent-page">
+                  <div class= "icon"><img src="img/recent.png" class="icon"></div>
+                  <div class="icon-label-active">RECENT</div></a></li>
+
+
+            <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#list-page">
+                  <div class= "icon"><img src="img/list.png" class="icon"></div>
+                  <div class="icon-label-active">LIST</div></a></li>
+
+
+             <li class="display-flex flex-align-center flex-justify-center">
+               <a href="#user-profile-page">
+                  <div class= "icon"><img src="img/profile.png" class="icon"></div>
+                  <div class="icon-label-active">PROFILE</div></a></li>     
+         </ul>
+      </footer>
+
+   </section>
+
+
+         <!--TRCK PROFILE PAGE-->
+
+
    <section data-role="page" id="animal-profile-page">
       <header data-role="header">
-         <h1>Animal Profile</h1>
+         <h1>Food Truck Profile</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
          </ul>
