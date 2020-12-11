@@ -6,7 +6,7 @@ const makeWarning = (target,message) => {
    },2000);
 }
 
-const checkSigninForm = () => {
+const checkSigninForm = async() => {
    let user = $("#signin-username").val();
    let pass = $("#signin-password").val();
 
@@ -17,10 +17,15 @@ const checkSigninForm = () => {
 
    console.log(user,pass)
 
-   if(user == 'user' && pass == 'pass') {
+   let found_user = await query({
+      type:'check_signin',
+      params:[user,pass]
+   });
+
+   if(found_user.result.length > 0) {
       // logged in
       console.log("success");
-      sessionStorage.userId = 3;
+      sessionStorage.userId = found_user.result[0].id;
 
       $("#signin-form")[0].reset();
    } else {
@@ -29,7 +34,7 @@ const checkSigninForm = () => {
       sessionStorage.removeItem('userId');
 
       // DO SOMETHING HERE
-      makeWarning("#signin-warning","LOGIN FAILED")
+      makeWarning("#signin-warning","Login Failed")
    }
 
    checkUserId();
@@ -45,7 +50,14 @@ const checkUserId = () => {
          $.mobile.navigate("#signin-page");
    } else {
       // logged in
-      if(p.some(o=>window.location.hash===o))
-         $.mobile.navigate("#recent-page");
+      if(p.some(o=>window.location.hash===o)) {
+         query({type:'trucks_by_user_id',params:[sessionStorage.userId]})
+         .then(d=>{
+            if(d.result.length) $.mobile.navigate("#recent-page");
+            else $.mobile.navigate("#list-page");
+         })
+      }
    }
 }
+
+

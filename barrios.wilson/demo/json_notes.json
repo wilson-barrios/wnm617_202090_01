@@ -1,0 +1,9 @@
+{
+	"notes": [
+		"Json files alwasys start with either and array[] or and object {}"
+		"Json files cannot have comments, so put any notes in teh list"
+		"Commas got between items in onjects or arrays, but there should never be a trailing comma", "All property names must be in quotations marks",
+		"All string quotations ,arks must be double quotes",
+		"Use a linter like jsonlint.com to check json"
+	]
+}

@@ -1,0 +1,126 @@
+[05-Nov-2020 20:59:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:03:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:03:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:03:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:03:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:03:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:03:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:04:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:04:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:05:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:06:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:07:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:58:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:58:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 21:58:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 23:04:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 23:04:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 23:39:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 23:42:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 23:45:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
+[05-Nov-2020 23:52:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Auth() in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php:7
+Stack trace:
+#0 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(53): makeConn()
+#1 /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php(94): makeStatement(Object(stdClass))
+#2 {main}
+  thrown in /home/wilsonbarrios/wbarrios.com/aau/wnm617/barrios.wilson/data/api.php on line 7
