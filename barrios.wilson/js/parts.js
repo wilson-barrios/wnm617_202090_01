@@ -32,7 +32,7 @@ const makeTruckProfile = templater(o=>`
    </div>
    <h2>${o.name}</h2>
    <div>Type ${o.type}</div>
-   <div>Dishes ${o.dishes}</div>
+   <div>dishes ${o.dishes}</div>
    <div><p>${o.description}</p></div>
    <div><a href="#" class="js-truck-delete" data-id="${o.id}">Delete</a></div></div>
 </div>`);
@@ -96,9 +96,10 @@ ${FormControl({
 
 
 const makeTruckEditForm = o => `
-<!--<div class="user-profile-image">
-   <img src="${o.img}">
-</div>-->
+<input type="hidden" id="truck-edit-image" value="${o.img}">
+<label class="image-uploader thumbnail picked" style="background-image:url('${o.img}')">
+   <input type="file" data-role="none" id="truck-edit-input">
+</label>
 ${FormControl({
    namespace:'truck-edit',
    name:'name',
@@ -118,7 +119,7 @@ ${FormControl({
 ${FormControl({
    namespace:'truck-edit',
    name:'dishes',
-   displayname:'Dishes',
+   displayname:'dishes',
    type:'text',
    placeholder:'Type the dishes',
    value:o.dishes
@@ -135,7 +136,7 @@ ${FormControl({
 
 const drawTruckList = (a,empty_phrase="No trucks yet, you should add some.") => {
    $("#list-page .trucklist").html(
-      a.length ? maketruckList(a) : empty_phrase
+      a.length ? makeTruckList(a) : empty_phrase
    )
 }
 
@@ -162,9 +163,8 @@ const makeFilterList = (trucks) => {
 
 
 
-const makeUploaderImage = ({namespace,folder,name}) => {
-   console.log(namespace,folder,name)
-   $(`#${namespace}-image`).val(folder+name);
-   $(`#${namespace}-page .image-uploader`)
-      .css({'background-image':`url(${folder+name}`})
+const makeUploaderImage = (el, name, folder='') => {
+
+   $(el).parent().css({'background-image':`url(${folder+name}`}).addClass('picked')
+      .prev().val(folder+name);
 }

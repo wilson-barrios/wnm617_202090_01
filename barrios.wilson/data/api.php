@@ -168,7 +168,7 @@ function makeStatement($data) {
             `track_trucks`
             (`user_id`,`name`,`type`,`dishes`,`description`,`img`,`date_create`)
             VALUES
-            (?, ?, ?, ?, ?, 'https://via.placeholder.com/400?text=ANIMAL', NOW())
+            (?, ?, ?, ?, ?, 'https://via.placeholder.com/400?text=TRUCK', NOW())
             ",$p);
          return ["id"=>$c->lastInsertId()];
 
@@ -214,7 +214,8 @@ function makeStatement($data) {
             `name` = ?,
             `type` = ?,
             `dishes` = ?,
-            `description` = ?
+            `description` = ?,
+            `img`=?
             WHERE `id` = ?
             ",$p,false);
          return ["result"=>"success"];

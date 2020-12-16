@@ -41,12 +41,13 @@ const checkUserEditForm = () => {
 const checkTruckAddForm = () => {
    let name = $("#truck-add-name").val();
    let type = $("#truck-add-type").val();
-   let dishes = $("#truck-add-dishes").val();
+   let breed = $("#truck-add-breed").val();
    let description = $("#truck-add-description").val();
+   let image = $("#truck-add-image").val();
 
    query({
       type:'insert_truck',
-      params:[sessionStorage.userId,name,type,dishes,description]
+      params:[sessionStorage.userId,name,type,breed,description,image]
    }).then(d=>{
       if(d.error) {
          throw d.error;
@@ -64,10 +65,11 @@ const checkTruckEditForm = () => {
    let type = $("#truck-edit-type").val();
    let dishes = $("#truck-edit-dishes").val();
    let description = $("#truck-edit-description").val();
+   let image = $("#truck-edit-image").val();
 
    query({
       type:'update_truck',
-      params:[name,type,dishes,description,sessionStorage.truckId]
+      params:[name,type,dishes,description,image,sessionStorage.truckId]
    }).then(d=>{
       if(d.error) {
          throw d.error;
@@ -111,7 +113,7 @@ const checkLocationAddForm = () => {
 
 
 
-const checkTruckDelete = id => {
+const checktruckDelete = id => {
    query({
       type:'delete_truck',
       params:[id]
@@ -138,7 +140,7 @@ const checkSearchForm = async() => {
       params:[s,sessionStorage.userId]
    })
 
-   drawTruckList(r.result,"Search produced no results.");
+   drawtruckList(r.result,"Search produced no results.");
 
    console.log(r)
 }
