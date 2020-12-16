@@ -5,14 +5,18 @@
 }
 
 :root {
-   --font-sans:Helvetica, Arial, sans-serif;
-   --font-serif:Georgia, serif;
+   --font-body:'Work Sans', sans-serif;
+   --font-heading:'Work Sans', sans-serif;
+
+  
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 
    --color-neutral-lighter:#f0f0f1;
-   --color-neutral-light:#e0e0e5;
+   --color-neutral-light:#eec76c;
    --color-neutral-mediumer:#b4b4be;
    --color-neutral-medium:#83838f;
-   --color-neutral-dark:#30304e;
+   --color-neutral-dark:#3b3a38;
 
     --color-main-light: #d5fffe;
     --color-main-medium: #1acfc8;
@@ -25,9 +29,10 @@
 }
 
 body {
-   margin:0;
-   font-size:100%;
-   font-family:var(--font-sans);
+  margin: 0;
+  font-size: 100%;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-normal);
 }
 
 h1,
@@ -36,8 +41,8 @@ h3,
 h4,
 h5,
 h6 {
-   color:var(--color-neutral-dark);
-   font-family:var(--font-serif);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-normal);
 }
 
 
@@ -133,7 +138,7 @@ a {
 .hotdog {
    width: 100%;
    display: inline-flex;
-   background-color: var(--color-neutral-light);
+   background-color: var(--color-neutral-lighter);
    padding: 0.5em 1em;
    border-radius: 2em;
    line-height:1;
@@ -170,13 +175,25 @@ a {
    overflow:hidden;
    position:relative;
 }
-.ui-header,
+
+.ui-header{
+   flex: none;
+   height:var(--header-height);
+   line-height:var(--header-height);
+   border-width:0;
+   background-color:var(--color-neutral-light);
+   box-shadow:0 0 5px rgba(0,0,0,0.15);
+   position:relative;
+   overflow:hidden;
+}
+
+
 .ui-footer {
    flex: none;
    height:var(--header-height);
    line-height:var(--header-height);
    border-width:0;
-   background-color:var(--color-white);
+   background-color:#ba2b23;
    box-shadow:0 0 5px rgba(0,0,0,0.15);
    position:relative;
    overflow:hidden;
@@ -204,7 +221,7 @@ a {
    position:relative;
    z-index:2;
    margin:0;
-   padding:0;
+   padding:0 1em;
    display:flex;
    list-style-type:none;
 }
@@ -212,7 +229,14 @@ a {
    flex: 1 1 auto;
    text-align:center;
 }
-.ui-footer a,
+.ui-footer a {
+  text-transform: uppercase;
+  color: var(--color-neutral-medium);
+  font-weight: var(--font-weight-medium);
+  color: white;
+  display: block;
+}
+
 .ui-header a {
    padding:0 1em;
    display:block;
@@ -480,14 +504,14 @@ a {
 
 
 
-/* ANIMAL LIST */
-.animallist-icon img {
+/* truck LIST */
+.trucklist-icon img {
    width: 100px;
    height: 80px;
    vertical-align: text-bottom;
    object-fit: cover;
 }
-.animallist-item {
+.trucklist-item {
    display: flex;
    margin: 1em;
    background-color: #ffffff;
@@ -495,11 +519,11 @@ a {
    border-radius: 1em;
    overflow: hidden;
 }
-.animallist-description {
+.trucklist-description {
    padding:0.5em;
    flex: 1 1 auto;
 }
-.animallist-name {
+.trucklist-name {
    font-size:1.2em;
 }
 
@@ -508,7 +532,7 @@ a {
 
 
 
-#animal-profile-page [data-role='main'] {
+#truck-profile-page [data-role='main'] {
     display: flex;
     flex-direction: column;
 }
@@ -525,10 +549,10 @@ a {
 }
 
 
-.animal-profile {
+.truck-profile {
   padding:1em;
 }
-.animal-profile-image img {
+.truck-profile-image img {
   width:30vw;
   height:30vw;
   object-fit:cover;
@@ -541,13 +565,13 @@ a {
   margin:1em;
   width:calc(100% - 2em);
 }
-.animal-popup img {
+.truck-popup img {
   width:80px;
 }
-.animal-popup h2 {
+.truck-popup h2 {
   margin:0;
 }
-.animal-popup-description {
+.truck-popup-description {
   padding:1em;
 }
 
@@ -586,4 +610,27 @@ a {
    background-position:center;
    background-size:contain;
    background-repeat:no-repeat;
+}
+.image-uploader.thumbnail {
+   width:5em;
+   height:5em;
+   border-radius:0.5em;
+   background-position:center;
+   background-size:cover;
+   position:relative;
+   border:2px solid white;
+   box-shadow:0 1px 3px rgba(0,0,0,0.2);
+}
+.image-uploader.thumbnail::before {
+   color:black;
+   content:'+';
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   vertical-align:middle;
+   font-size:3em;
+}
+.image-uploader.thumbnail.picked::before {
+   content:'';
 }
