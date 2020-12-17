@@ -80,13 +80,10 @@ $(()=>{
       checkUpload(this.files[0])
       .then(d=>{
          console.log(d)
-         makeUploaderImage({
-            namespace:'user-upload',
-            folder:'uploads/',
-            name:d.result
-         })
+         makeUploaderImage(this,d.result,'uploads/')
       })
    })
+
 
 
 

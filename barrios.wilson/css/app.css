@@ -1,3 +1,5 @@
+
+
 /* CSS RESET */
 
 *, *::after, *::before {
@@ -11,13 +13,11 @@
   
   --font-weight-normal: 400;
   --font-weight-bold: 700;
-
    --color-neutral-lighter:#f0f0f1;
-   --color-neutral-light:#eec76c;
+   --color-neutral-light:#e27906;
    --color-neutral-mediumer:#b4b4be;
-   --color-neutral-medium:#83838f;
+   --color-neutral-medium:#888581;
    --color-neutral-dark:#3b3a38;
-
     --color-main-light: #d5fffe;
     --color-main-medium: #1acfc8;
     --color-main-dark: #1e5452;
@@ -33,6 +33,7 @@ body {
   font-size: 100%;
   font-family: var(--font-body);
   font-weight: var(--font-weight-normal);
+  background: #f4f2f0;
 }
 
 h1,
@@ -44,9 +45,21 @@ h6 {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-normal);
 }
+h1
+{
+  font-size: 0.7rem;
+}
 
+h2
+{
+  font-size: 2.4rem;
+  color: #ba2b23;
+}
 
-
+h3
+{
+  font-size: 1.2rem;
+}
 
 a {
    color:inherit;
@@ -57,8 +70,20 @@ a {
       text-decoration: underline;
    }
 
+.html
+{
+  font-size: 16px;
+}
 
-
+.ico-md, .ico-bg
+{
+  color: var(--color-neutral-medium);
+  font-size: 1.2rem;
+}
+.ico-bg
+{
+  font-size: 1.5rem;
+}
 
 
 /* LAYOUT CLASSES */
@@ -67,6 +92,7 @@ a {
    max-width:1000px;
    margin-left: auto;
    margin-right: auto;
+   margin-top: 1em;
 }
 .hidden { display:none; }
 .overscroll {
@@ -74,8 +100,6 @@ a {
    width:100%;
    overflow:auto;
 }
-
-
 
 .display-flex { display:flex; }
 .display-block { display:block; }
@@ -87,15 +111,6 @@ a {
 
 .flex-justify-center { justify-content:center; }
 .flex-align-center { align-items:center; }
-
-
-
-
-
-
-
-
-
 
 
 /* FORMS */
@@ -125,7 +140,7 @@ a {
     border-width: 0;
     background-color: var(--color-neutral-light);
     padding: 0.5em 1em;
-    border-radius: 0.2em;
+    border-radius: 1em;
     font: inherit;
     outline: 0;
     text-align:center;
@@ -142,6 +157,7 @@ a {
    padding: 0.5em 1em;
    border-radius: 2em;
    line-height:1;
+
 }
 [data-role="header"]>.hotdog {
    padding:0.7em 1em;
@@ -176,17 +192,34 @@ a {
    position:relative;
 }
 
-.ui-header{
-   flex: none;
-   height:var(--header-height);
-   line-height:var(--header-height);
-   border-width:0;
-   background-color:var(--color-neutral-light);
-   box-shadow:0 0 5px rgba(0,0,0,0.15);
-   position:relative;
-   overflow:hidden;
+header
+{
+  background-color:var(--color-neutral-dark);
 }
 
+.ui-header{
+   flex: none;
+   border-width:0;
+   background-color:#d4d1c9;
+   box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.33);
+   position:relative;
+   overflow:hidden;
+   padding: 0.2rem;
+}
+
+.ui-header #logo
+{
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
+.ui-header #logo img
+{
+  height: 3rem;
+}
 
 .ui-footer {
    flex: none;
@@ -197,21 +230,21 @@ a {
    box-shadow:0 0 5px rgba(0,0,0,0.15);
    position:relative;
    overflow:hidden;
+   border-top-right-radius: 1rem;
+   border-top-left-radius: 1rem;
 }
 
 .ui-header .ui-title {
    margin:0;
    padding:0;
-   position:absolute;
    top:0;
    left:0;
    width:100%;
    text-align:center;
    z-index:1;
+   font-size: 1.3rem;   
+   margin-bottom: 0.5rem;
 }
-
-
-
 
 
 
@@ -236,7 +269,6 @@ a {
   color: white;
   display: block;
 }
-
 .ui-header a {
    padding:0 1em;
    display:block;
@@ -255,13 +287,18 @@ a {
 #signin-page [data-role='main'] {
    display:flex;
    flex-direction:column;
+
 }
 #signup-page [data-role='main'] {
    display:flex;
    align-items:center;
    justify-content:center;
 }
-
+#signin-page
+{
+     background-image: url(../img/mainback.jpg);
+   background-size: cover;
+}
 
 
 
@@ -453,11 +490,6 @@ a {
   transform: translateY(-100%);
 }
 
-
-
-
-
-
 /* Profile */
 .user-profile-image {
    position:relative;
@@ -471,7 +503,18 @@ a {
    object-fit:cover;
 }
 
-
+.user-profile-image
+{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+.user-profile-image img
+{
+  width: 50%;
+  height: auto;
+}
 
 
 /* SETTINGS */
@@ -481,7 +524,7 @@ a {
    margin:0;
 }
 .settings-list a {
-   padding: 0.5em 1em;
+   padding: 2rem 1rem;
 }
 .settings-list li:not(:first-child) {
    border-top: 1px solid var(--color-neutral-medium);
@@ -505,6 +548,7 @@ a {
 
 
 /* truck LIST */
+
 .trucklist-icon img {
    width: 100px;
    height: 80px;
@@ -586,6 +630,7 @@ a {
 .filter-list {
     display: flex;
     overflow: auto;
+    padding: 0.5rem 0;
 }
 .filter {
     padding: 0 0.5em;
@@ -602,7 +647,7 @@ a {
    display:none;
 }
 .image-uploader.full {
-   position:absolute;
+   
    top:0;
    left:0;
    width:100%;
@@ -634,3 +679,5 @@ a {
 .image-uploader.thumbnail.picked::before {
    content:'';
 }
+app.css
+Displaying app.css.

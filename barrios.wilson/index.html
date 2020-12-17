@@ -14,6 +14,9 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Foodtruck Tracker</title>
 
+   <link href="css/fontawesome.css" rel="stylesheet">
+   <link href="css/brands.css" rel="stylesheet">
+   <link href="css/solid.css" rel="stylesheet">
 
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
@@ -41,7 +44,7 @@
    <section data-role="page" id="signin-page">
       <div data-role="main">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
-            <img src="./site_logo.png" style="width:90vw;height:90vw;" class="icon" alt="">
+           <img src="img/ftt-logo.png" style="width:60vw;height:60vw;" class="icon" alt="">
          </div>
          <form id="signin-form" data-ajax="false" style="padding:1em">
             <div class="form-control">
@@ -55,7 +58,7 @@
             <div class="form-control">
                <input type="submit" data-role="none" class="form-button" value="Sign In">
             </div>
-            <div class="form-control" style="text-align:center;font-size:0.8em">
+            <div class="form-control" style="text-align:center;font-size:0.8rem; color:#ffffff;">
                Don't have an account? <a href="#signup-page">Sign Up</a>!
             </div>
          </form>
@@ -104,22 +107,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    <section data-role="page" id="recent-page">
+      <header data-role="header">
+         <div id="logo">
+            <img src="img/ftt-logo-h.png">
+         </div>
+      </header>
       <div data-role="main">
          <div class="map"></div>
 
@@ -140,9 +133,9 @@
       </div>
       <footer data-role="footer">
          <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+            <li><a href="#recent-page"><i class="fas fa-map-marked-alt"></i> Recent</a></li>
+            <li><a href="#list-page"><i class="fas fa-list"></i> List</a></li>
+            <li><a href="#user-profile-page"><i class="fas fa-user-alt"></i> Profile</a></li>
          </ul>
       </footer>
 
@@ -151,33 +144,28 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+<!-- LIST PAGE -->
 
 
 
    <section data-role="page" id="list-page">
-      <header data-role="header" style="padding:0 1em">
-         <form class="hotdog" id="list-search-form" data-ajax="false">
-            <input type="search" id="list-search-input" data-role="none" placeholder="Search">
-         </form>
-      </header>
       <header data-role="header">
-         <div class="filter-list">
-            <!-- <div class="filter" data-field="type" data-value="">All</div>
-            <div class="filter" data-field="type" data-value="cat">Cat</div>
-            <div class="filter" data-field="type" data-value="dog">Dog</div>
-            <div class="filter" data-field="type" data-value="horse">Horse</div> -->
+         <div id="logo">
+            <img src="img/ftt-logo-h.png">
          </div>
+         <div class="col-search">
+           <form class="hotdog" id="list-search-form" data-ajax="false">
+            <input type="search" id="list-search-input" data-role="none" placeholder="Search">
+           </form>
+       </div>
+       <div class="col-filter">   
+         <div class="filter-list">
+               <div class="filter" data-field="type" data-value="">All</div>
+               <div class="filter" data-field="type" data-value="cat">Mexican</div>
+               <div class="filter" data-field="type" data-value="dog">Italian</div>
+               <div class="filter" data-field="type" data-value="horse">Hotdogs</div> 
+         </div>
+      </div>
       </header>
       <div data-role="main">
          <div class="overscroll">
@@ -187,26 +175,12 @@
       </div>
       <footer data-role="footer">
          <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+            <li><a href="#recent-page"><i class="fas fa-map-marked-alt"></i> Recent</a></li>
+            <li><a href="#list-page"><i class="fas fa-list"></i> List</a></li>
+            <li><a href="#user-profile-page"><i class="fas fa-user-alt"></i> Profile</a></li>
          </ul>
       </footer>
    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -221,19 +195,27 @@
 
 
    <section data-role="page" id="user-profile-page">
+      <header data-role="header">
+         <div id="logo">
+            <img src="img/ftt-logo-h.png">
+         </div>
+      </header>
       <div data-role="main">
          <div class="profile"></div>
       </div>
       <footer data-role="footer">
          <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+            <li><a href="#recent-page"><i class="fas fa-map-marked-alt"></i> Recent</a></li>
+            <li><a href="#list-page"><i class="fas fa-list"></i> List</a></li>
+            <li><a href="#user-profile-page"><i class="fas fa-user-alt"></i> Profile</a></li>
          </ul>
       </footer>
    </section>
 
+
+
    <section data-role="page" id="user-settings-page">
+
       <header data-role="header">
          <h1>User Settings</h1>
          <ul>
@@ -248,6 +230,11 @@
          </ul>
       </div>
    </section>
+
+
+
+
+
 
    <section data-role="page" id="user-edit-page">
       <header data-role="header">
@@ -265,6 +252,11 @@
          </div>
       </div>
    </section>
+
+
+
+
+
 
    <section data-role="page" id="user-password-page">
       <header data-role="header">
@@ -295,8 +287,19 @@
       </div>
    </section>
 
+
+
+
+<!-- USER UPOAD PAGE -->
+
+
+
+
    <section data-role="page" id="user-upload-page">
       <header data-role="header">
+         <div id="logo">
+            <img src="img/ftt-logo-h.png">
+         </div>
          <h1>Upload Photo</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
@@ -311,16 +314,9 @@
                <input type="file" data-role="none" id="user-upload-input">
             </label>
          </form>
-         <label for="user-upload-input" class="form-button">Choose Image</label>
+         <label for="user-upload-input" class="form-button" style="margin-top:2rem;">Choose Image</label>
       </div>
    </section>
-
-
-
-
-
-
-
 
 
 
@@ -355,6 +351,9 @@
       </div>
    </section>
 
+
+
+
    <section data-role="page" id="truck-edit-page">
       <header data-role="header">
          <h1>truck Info</h1>
@@ -372,9 +371,12 @@
       </div>
    </section>
 
+
+
+
    <section data-role="page" id="truck-add-page">
       <header data-role="header">
-         <h1>truck Info</h1>
+         <h1>Truck Info</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
@@ -386,6 +388,12 @@
             <form id="truck-add-form" data-ajax="false" style="padding:1em">
             
                <input type="hidden" id="truck-add-destination" value="#list-page">
+
+               <input type="hidden" id="truck-add-image">
+               <label class="image-uploader thumbnail">
+                  <input type="file" data-role="none" id="truck-add-upload">
+               </label>
+
             
                <div class="form-control">
                   <label for="truck-add-name" class="form-label">Name</label>

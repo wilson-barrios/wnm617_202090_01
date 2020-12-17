@@ -41,13 +41,13 @@ const checkUserEditForm = () => {
 const checkTruckAddForm = () => {
    let name = $("#truck-add-name").val();
    let type = $("#truck-add-type").val();
-   let breed = $("#truck-add-breed").val();
+   let dish = $("#truck-add-dish").val();
    let description = $("#truck-add-description").val();
    let image = $("#truck-add-image").val();
 
    query({
       type:'insert_truck',
-      params:[sessionStorage.userId,name,type,breed,description,image]
+      params:[sessionStorage.userId,name,type,dish,description,image]
    }).then(d=>{
       if(d.error) {
          throw d.error;

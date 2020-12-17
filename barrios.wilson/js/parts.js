@@ -15,14 +15,15 @@ const makeTruckList = templater(o=>`
 const makeUserProfile = templater(o=>`
    <div class="user-profile-image">
       <img src="${o.img}" alt="">
-      <a href="#user-upload-page" class="floater bottom right"><img class="icon" src="img/icon/edit.svg" alt=""></a></a>
+      <a href="#user-upload-page" class="floater bottom right">
+                  <i class="fas fa-edit ico-bg"></i>
+               </a>
    </div>
    <div style="padding:1em">
       <h2>${o.name}</h2>
       <h3>@${o.username}</h3>
       <h3>${o.email}</h3>
-      <div class="floater top right" style="font-size:1.25em"><a href="#user-settings-page">&equiv;</a></div>
-   </div>
+      <div class="floater top right"><a href="#user-settings-page"><i class="fas fa-cogs ico-bg"></i></a></div>
    `);
 
 const makeTruckProfile = templater(o=>`
@@ -31,8 +32,8 @@ const makeTruckProfile = templater(o=>`
       <img src="${o.img}" alt="">
    </div>
    <h2>${o.name}</h2>
-   <div>Type ${o.type}</div>
-   <div>dishes ${o.dishes}</div>
+   <div><strong>Type </strong>${o.type}</div>
+   <div><strong>Dishes </strong>${o.dishes}</div>
    <div><p>${o.description}</p></div>
    <div><a href="#" class="js-truck-delete" data-id="${o.id}">Delete</a></div></div>
 </div>`);
@@ -155,7 +156,7 @@ const makeFilterList = (trucks) => {
    |
    ${filterList(trucks,'type')}
    |
-   ${filterList(trucks,'dishes')}
+   
    `
 }
 
