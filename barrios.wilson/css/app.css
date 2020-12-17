@@ -13,7 +13,7 @@
   
   --font-weight-normal: 400;
   --font-weight-bold: 700;
-   --color-neutral-lighter:#f0f0f1;
+   --color-neutral-lighter:#ffff;
    --color-neutral-light:#e27906;
    --color-neutral-mediumer:#b4b4be;
    --color-neutral-medium:#888581;
@@ -236,13 +236,15 @@ header
 
 .ui-header .ui-title {
    margin:0;
-   padding:0;
+   padding:0.3em;
    top:0;
    left:0;
    width:100%;
    text-align:center;
    z-index:1;
-   font-size: 1.3rem;   
+   font-size: 1rem;
+   font-weight: bold;
+   text-transform: uppercase;   
    margin-bottom: 0.5rem;
 }
 
@@ -465,7 +467,7 @@ header
 /* CIRCLE */
 .btn-circle {
   display:inline-block;
-   background-color:var(--color-white);
+   background-color:#eec76c;
    width:3rem;
    height:3rem;
    line-height:3rem;
@@ -679,5 +681,4 @@ header
 .image-uploader.thumbnail.picked::before {
    content:'';
 }
-app.css
-Displaying app.css.
+

@@ -143,8 +143,6 @@ function makeStatement($data) {
 
 
 
-
-
       /* ----- CRUD ------ */
 
       // INSERTS
@@ -153,6 +151,8 @@ function makeStatement($data) {
          // Check for duplicate users
          $r = makeQuery($c,"SELECT * FROM `track_users` WHERE `username`=? OR `email`=?",[$p[0],$p[1]]);
          if(count($r['result'])) return ["error"=>"Username or Email already exists"];
+
+
 
          // Create new user
          $r = makeQuery($c,"INSERT INTO
@@ -168,7 +168,7 @@ function makeStatement($data) {
             `track_trucks`
             (`user_id`,`name`,`type`,`dishes`,`description`,`img`,`date_create`)
             VALUES
-            (?, ?, ?, ?, ?, 'https://via.placeholder.com/400?text=TRUCK', NOW())
+            (?, ?, ?, ?, ?, ?, NOW())
             ",$p);
          return ["id"=>$c->lastInsertId()];
 

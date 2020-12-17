@@ -41,6 +41,9 @@
 <body>
 
 
+
+<!-- SIGN IN PAGE -->
+
    <section data-role="page" id="signin-page">
       <div data-role="main">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
@@ -70,6 +73,11 @@
          </div>
       </div>
    </section>
+
+
+
+<!-- SIGN UP PAGE -->
+
 
    <section data-role="page" id="signup-page">
       <div data-role="main">
@@ -103,7 +111,7 @@
 
 
 
-
+<!-- MAP PAGE -->
 
 
 
@@ -161,9 +169,9 @@
        <div class="col-filter">   
          <div class="filter-list">
                <div class="filter" data-field="type" data-value="">All</div>
-               <div class="filter" data-field="type" data-value="cat">Mexican</div>
-               <div class="filter" data-field="type" data-value="dog">Italian</div>
-               <div class="filter" data-field="type" data-value="horse">Hotdogs</div> 
+               <div class="filter" data-field="type" data-value="mexican">Mexican</div>
+               <div class="filter" data-field="type" data-value="italian">Italian</div>
+               <div class="filter" data-field="type" data-value="hotdogs">Hotdogs</div> 
          </div>
       </div>
       </header>
@@ -187,22 +195,20 @@
 
 
 
+<!-- USER PROFILE PAGE -->
 
-
-
-
-
-
-
-   <section data-role="page" id="user-profile-page">
+ <section data-role="page" id="user-profile-page">
       <header data-role="header">
          <div id="logo">
             <img src="img/ftt-logo-h.png">
          </div>
+         <h1>User Profile</h1>
       </header>
       <div data-role="main">
          <div class="profile"></div>
       </div>
+
+
       <footer data-role="footer">
          <ul>
             <li><a href="#recent-page"><i class="fas fa-map-marked-alt"></i> Recent</a></li>
@@ -214,10 +220,17 @@
 
 
 
+<!-- USER SETINGS  PAGE -->
+
+
+
    <section data-role="page" id="user-settings-page">
 
-      <header data-role="header">
-         <h1>User Settings</h1>
+<header data-role="header">
+         <div id="logo">
+            <img src="img/ftt-logo-h.png">
+         </div>
+      <h1>User Settings</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
          </ul>
@@ -226,18 +239,24 @@
          <ul class="settings-list">
             <li><a href="#user-edit-page">Update Profile</a></li>
             <li><a href="#user-password-page">Change Password</a></li>
-            <li><a href="#" class="js-logout">Logout</a></li>
          </ul>
+
+         <label for="user-logout" class="form-button js-logout" style="margin-top:2rem;">LOGOUT</label>
+
       </div>
    </section>
 
 
 
 
-
+<!-- USER ID EDIT PAGE -->
 
    <section data-role="page" id="user-edit-page">
-      <header data-role="header">
+<header data-role="header">
+         <div id="logo">
+            <img src="img/ftt-logo-h.png">
+         </div>
+
          <h1>User Info</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
@@ -255,11 +274,14 @@
 
 
 
-
+<!-- USER PASSWORD PAGE -->
 
 
    <section data-role="page" id="user-password-page">
       <header data-role="header">
+         <div id="logo">
+            <img src="img/ftt-logo-h.png">
+         </div>
          <h1>Change Password</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
@@ -322,11 +344,14 @@
 
 
 
-
+<!-- TRUCK PROFILE PAGE -->
 
 
    <section data-role="page" id="truck-profile-page">
       <header data-role="header">
+         <div id="logo">
+            <img src="img/ftt-logo-h.png">
+         </div>
          <h1>Truck Profile</h1>
          <ul>
             <li><a href="#" data-rel="back">
@@ -352,10 +377,13 @@
    </section>
 
 
-
+<!-- TRUCK EDIT PAGE -->
 
    <section data-role="page" id="truck-edit-page">
       <header data-role="header">
+         <div id="logo">
+            <img src="img/ftt-logo-h.png">
+         </div>
          <h1>truck Info</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
@@ -374,8 +402,15 @@
 
 
 
+
+
+<!-- TRUCK ADD PAGE -->
+
    <section data-role="page" id="truck-add-page">
       <header data-role="header">
+         <div id="logo">
+            <img src="img/ftt-logo-h.png">
+         </div>
          <h1>Truck Info</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
@@ -404,7 +439,7 @@
                   <input id="truck-add-type" type="text" class="form-input" data-role="none">
                </div>
                <div class="form-control">
-                  <label for="truck-add-dishes" class="form-label">Dishes</label>
+                  <label for="truck-add-dishes" class="form-label">Favorite Dishes</label>
                   <input id="truck-add-dishes" type="text" class="form-input" data-role="none">
                </div>
                <div class="form-control">
@@ -422,13 +457,16 @@
 
 
 
-
+<!-- LOCATION ADD PAGE -->
 
 
 
 
    <section data-role="page" id="location-add-page">
       <header data-role="header">
+         <div id="logo">
+            <img src="img/ftt-logo-h.png">
+         </div>
          <h1>Choose Location</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
@@ -442,6 +480,11 @@
          <div class="map"></div>
       </div>
    </section>
+
+
+<!-- LOCATION DESCRIPTION PAGE -->
+
+
 
    <section data-role="page" id="location-description-page">
       <header data-role="header">

@@ -41,13 +41,13 @@ const checkUserEditForm = () => {
 const checkTruckAddForm = () => {
    let name = $("#truck-add-name").val();
    let type = $("#truck-add-type").val();
-   let dish = $("#truck-add-dish").val();
+   let dishes = $("#truck-add-dishes").val();
    let description = $("#truck-add-description").val();
    let image = $("#truck-add-image").val();
 
    query({
       type:'insert_truck',
-      params:[sessionStorage.userId,name,type,dish,description,image]
+      params:[sessionStorage.userId,name,type,dishes,description,image]
    }).then(d=>{
       if(d.error) {
          throw d.error;
@@ -60,6 +60,8 @@ const checkTruckAddForm = () => {
       $.mobile.navigate($("#truck-add-destination").val());
    })
 }
+
+
 const checkTruckEditForm = () => {
    let name = $("#truck-edit-name").val();
    let type = $("#truck-edit-type").val();
@@ -113,7 +115,7 @@ const checkLocationAddForm = () => {
 
 
 
-const checktruckDelete = id => {
+const checkTruckDelete = id => {
    query({
       type:'delete_truck',
       params:[id]
@@ -140,7 +142,7 @@ const checkSearchForm = async() => {
       params:[s,sessionStorage.userId]
    })
 
-   drawtruckList(r.result,"Search produced no results.");
+   drawTruckList(r.result,"Search produced no results.");
 
    console.log(r)
 }
@@ -192,3 +194,4 @@ const checkUserUploadForm = () => {
       window.history.back();
    })
 }
+

@@ -7,7 +7,7 @@ const makeTruckList = templater(o=>`
       <div class="trucklist-description">
          <div class="trucklist-name">${o.name}</div>
          <div class="trucklist-type"><strong>Type</strong> ${o.type}</div>
-         <div class="trucklist-dishes"><strong>dishes</strong> ${o.dishes}</div>
+         <div class="trucklist-dishes"><strong>Dishes</strong> ${o.dishes}</div>
       </div>
    </div>
    `);
@@ -120,7 +120,7 @@ ${FormControl({
 ${FormControl({
    namespace:'truck-edit',
    name:'dishes',
-   displayname:'dishes',
+   displayname:'Dishes',
    type:'text',
    placeholder:'Type the dishes',
    value:o.dishes
@@ -143,20 +143,21 @@ const drawTruckList = (a,empty_phrase="No trucks yet, you should add some.") => 
 
 
 
-const capitalize = s => s[0].toUpperCase()+s.substr(1);
+const capitalize = s => s=='' ? '' : s[0].toUpperCase()+s.substr(1);
 
 const filterList = (trucks,type) => {
    let a = [...(new Set(trucks.map(o=>o[type])))];
    return templater(o=>`<div class="filter" data-field="${type}" data-value="${o}">${capitalize(o)}</div>`)(a);
 }
 
+
 const makeFilterList = (trucks) => {
    return `
    <div class="filter" data-field="type" data-value="">All</div>
    |
    ${filterList(trucks,'type')}
-   |
-   
+
+
    `
 }
 
